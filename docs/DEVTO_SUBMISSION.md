@@ -47,7 +47,7 @@ We interpreted the theme through a grounded, human lens:
 ### Video Walkthrough
 An interactive animated walkthrough demonstrating the Memory Vault, Local Transcription, RAG Memory Assistant, Remembrance Studio, and Ghost Story Terminal:
 
-![Echoes Application Demo Walkthrough](https://raw.githubusercontent.com/ashutosh-ranjan/ghost-in-the-machine/master/docs/media/echoes_app_tour_1793469836415.webp)
+![Echoes Application Demo Walkthrough](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/echoes_app_tour_1793469836415.webp)
 
 *(A high-resolution demo recording is included in the repository at [`docs/media/echoes_app_tour_1793469836415.webp`](docs/media/echoes_app_tour_1793469836415.webp))*
 
@@ -55,18 +55,18 @@ An interactive animated walkthrough demonstrating the Memory Vault, Local Transc
 
 | Memory Vault & Detail Modal | Remembrance Studio Tribute |
 | :---: | :---: |
-| ![Memory Detail Modal](https://raw.githubusercontent.com/ashutosh-ranjan/ghost-in-the-machine/master/docs/media/memory_detail_modal_1793470275788.png) | ![Remembrance Studio](https://raw.githubusercontent.com/ashutosh-ranjan/ghost-in-the-machine/master/docs/media/dashboard_loaded_1793469849113.png) |
+| ![Memory Detail Modal](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/memory_detail_modal_1793470275788.png) | ![Remembrance Studio](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/dashboard_loaded_1793469849113.png) |
 
 | Ghost Story Mode CRT Terminal | Voice Keepsake Recorder |
 | :---: | :---: |
-| ![Ghost Story View](https://raw.githubusercontent.com/ashutosh-ranjan/ghost-in-the-machine/master/docs/media/ghost_story_view_1793469977658.png) | ![Preserve Story Modal](https://raw.githubusercontent.com/ashutosh-ranjan/ghost-in-the-machine/master/docs/media/preserve_story_modal_1793470325953.png) |
+| ![Ghost Story View](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/ghost_story_view_1793469977658.png) | ![Preserve Story Modal](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/preserve_story_modal_1793470325953.png) |
 
 ### Local Quickstart (Ready in Under 2 Minutes)
 Because Echoes is built for total privacy, it runs entirely on your local machine:
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/ashutosh-ranjan/ghost-in-the-machine.git
+git clone https://github.com/Ashutoshranjan195/ghost-in-the-machine.git
 cd ghost-in-the-machine
 
 # 2. Start local AI model (using Ollama)
@@ -87,7 +87,7 @@ Open `http://localhost:5173` to explore the vault.
 
 The complete source code is open source under the MIT License:
 
-- **GitHub Repository**: [https://github.com/ashutosh-ranjan/ghost-in-the-machine](https://github.com/ashutosh-ranjan/ghost-in-the-machine)
+- **GitHub Repository**: [https://github.com/Ashutoshranjan195/ghost-in-the-machine](https://github.com/Ashutoshranjan195/ghost-in-the-machine)
 - **License**: [MIT License](LICENSE)
 
 ```
@@ -179,5 +179,5 @@ Echoes proves that the *"Ghost in the Machine"* doesn't have to be a spooky gimm
 
 ---
 
-<!-- Team Submissions: Single-author project by Ashutosh Ranjan (@ashutosh-ranjan) -->
+<!-- Team Submissions: Single-author project by Ashutosh Ranjan (@Ashutoshranjan195) -->
 <!-- Thanks for participating! -->
