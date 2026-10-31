@@ -49,7 +49,7 @@ An interactive animated walkthrough demonstrating the Memory Vault, Local Transc
 
 ![Echoes Application Demo Walkthrough](https://raw.githubusercontent.com/Ashutoshranjan195/ghost-in-the-machine/master/docs/media/echoes_app_tour_1793469836415.webp)
 
-*(A high-resolution demo recording is included in the repository at [`docs/media/echoes_app_tour_1793469836415.webp`](docs/media/echoes_app_tour_1793469836415.webp))*
+*(A high-resolution animated recording is embedded above. You can also download the standalone MP4 video directly from [GitHub Release v1.0.0](https://github.com/Ashutoshranjan195/ghost-in-the-machine/releases/download/v1.0.0/echoes_demo_video.mp4) or inspect the repository at [`docs/media/echoes_demo_video.mp4`](docs/media/echoes_demo_video.mp4))*
 
 ### Live Interface Screenshots
 
