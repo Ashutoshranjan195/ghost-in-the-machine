@@ -5,8 +5,6 @@ import {
   User,
   Star,
   Mic,
-  Play,
-  Pause,
   Download,
   Edit3,
   Trash2,
@@ -37,7 +35,6 @@ export const MemoryDetailModal: React.FC<MemoryDetailModalProps> = ({
   onExport,
   onRefreshMemory
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [isEditingTranscript, setIsEditingTranscript] = useState(false);
   const [transcriptDraft, setTranscriptDraft] = useState('');

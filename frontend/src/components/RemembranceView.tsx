@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Heart,
   Flame,
   Printer,
   Sparkles,
-  Download,
   User,
   Music,
   Utensils,
   Quote,
-  Calendar,
-  Check,
-  FileText
+  Check
 } from 'lucide-react';
 import { Memory, RemembranceProfile } from '../types';
 import {
@@ -41,17 +38,29 @@ export const RemembranceView: React.FC<RemembranceViewProps> = ({ memories }) =>
   const [savedProfiles, setSavedProfiles] = useState<RemembranceProfile[]>([]);
   const [savedSuccess, setSavedSuccess] = useState(false);
 
-  useEffect(() => {
-    loadProfiles();
-  }, []);
-
-  const loadProfiles = async () => {
+  const loadProfiles = useCallback(async () => {
     try {
       const data = await fetchRemembranceProfiles();
       setSavedProfiles(data);
     } catch (e) {
       console.warn('Could not load profiles', e);
     }
+  }, []);
+
+  useEffect(() => {
+    loadProfiles();
+  }, [loadProfiles]);
+
+  const handleSelectProfile = (p: RemembranceProfile) => {
+    setPersonName(p.person_name || '');
+    setRelationship(p.relationship || '');
+    setBirthDate(p.birth_date || '');
+    setPassingDate(p.passing_date || '');
+    setBiography(p.biography || '');
+    setFavoriteFood(p.favorite_food || '');
+    setFavoriteMusic(p.favorite_music || '');
+    setFavoriteQuote(p.favorite_quote || '');
+    setTributeMessage(p.tribute_message || '');
   };
 
   const handleToggleMemory = (id: string) => {
@@ -194,6 +203,30 @@ export const RemembranceView: React.FC<RemembranceViewProps> = ({ memories }) =>
             <User className="w-4 h-4 text-amber-400" />
             <span>Honoree Details</span>
           </h2>
+
+          {savedProfiles.length > 0 && (
+            <div className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+              <label className="block text-[11px] font-mono uppercase tracking-wider text-amber-400 mb-1.5">
+                Saved Memorial Keepsakes
+              </label>
+              <div className="flex flex-wrap gap-1.5">
+                {savedProfiles.map((p) => (
+                  <button
+                    key={p.id || p.person_name}
+                    type="button"
+                    onClick={() => handleSelectProfile(p)}
+                    className={`text-xs px-2.5 py-1 rounded-lg border transition-colors ${
+                      personName === p.person_name
+                        ? 'bg-amber-500/20 border-amber-500/50 text-amber-300 font-medium'
+                        : 'bg-zinc-800/80 border-zinc-700/60 text-zinc-300 hover:bg-zinc-800'
+                    }`}
+                  >
+                    {p.person_name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>

@@ -6,14 +6,12 @@ import {
   Mic,
   Calendar,
   User,
-  Tag,
   Trash2,
   Edit3,
   Download,
   LayoutGrid,
   List,
-  Sparkles,
-  FileText
+  Sparkles
 } from 'lucide-react';
 import { Memory } from '../types';
 

@@ -7,7 +7,6 @@ import {
   Calendar,
   User,
   Tag,
-  FileText,
   Sparkles,
   CheckCircle2
 } from 'lucide-react';
@@ -96,6 +95,7 @@ export const MemoryModal: React.FC<MemoryModalProps> = ({
         setRecordingSeconds((prev) => prev + 1);
       }, 1000);
     } catch (err: any) {
+      console.warn('Microphone error:', err);
       setErrorMsg('Microphone access denied or unsupported in this browser.');
     }
   };

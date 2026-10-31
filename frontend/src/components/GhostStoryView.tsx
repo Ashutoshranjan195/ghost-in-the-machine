@@ -4,11 +4,9 @@ import {
   Terminal,
   Skull,
   Flame,
-  Sparkles,
   Copy,
   Check,
   AlertTriangle,
-  Sliders,
   Moon,
   Wind
 } from 'lucide-react';

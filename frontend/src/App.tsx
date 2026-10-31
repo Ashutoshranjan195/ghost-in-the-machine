@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   fetchHealth,
   fetchMemories,
@@ -31,21 +31,16 @@ export function App() {
   const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null);
   const [editingMemory, setEditingMemory] = useState<Memory | null>(null);
 
-  useEffect(() => {
-    loadHealth();
-    loadMemories();
-  }, []);
-
-  const loadHealth = async () => {
+  const loadHealth = useCallback(async () => {
     try {
       const data = await fetchHealth();
       setHealth(data);
     } catch (e) {
       console.warn('Backend not responding yet', e);
     }
-  };
+  }, []);
 
-  const loadMemories = async () => {
+  const loadMemories = useCallback(async () => {
     try {
       const res = await fetchMemories();
       setMemories(res.items);
@@ -61,14 +56,19 @@ export function App() {
     } catch (e) {
       console.warn('Could not load memories', e);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    loadHealth();
+    loadMemories();
+  }, [loadHealth, loadMemories]);
 
   const handleCreateOrUpdateMemory = async (
     data: MemoryCreateInput,
     audioFile?: File
   ) => {
     if (editingMemory) {
-      const updated = await updateMemory(editingMemory.id, data);
+      await updateMemory(editingMemory.id, data);
       if (audioFile) {
         await uploadAudio(editingMemory.id, audioFile);
       }

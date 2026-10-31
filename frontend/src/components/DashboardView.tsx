@@ -10,8 +10,7 @@ import {
   Cpu,
   ArrowRight,
   Clock,
-  User,
-  Tag
+  User
 } from 'lucide-react';
 import { HealthStatus, Memory } from '../types';
 

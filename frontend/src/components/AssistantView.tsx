@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Radio,
   Send,
@@ -6,12 +6,10 @@ import {
   ShieldCheck,
   Cpu,
   Trash2,
-  BookOpen,
   ArrowRight,
-  Flame,
-  AlertCircle
+  Flame
 } from 'lucide-react';
-import { ChatMessage, HealthStatus, Memory } from '../types';
+import { ChatMessage, HealthStatus } from '../types';
 import { askAssistant, fetchChatHistory, clearChatHistory } from '../services/api';
 
 interface AssistantViewProps {
@@ -33,17 +31,10 @@ export const AssistantView: React.FC<AssistantViewProps> = ({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedModel, setSelectedModel] = useState<string>('');
+  const [selectedModel, setSelectedModel] = useState<string>(health?.active_model || '');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    loadHistory();
-    if (health?.active_model) {
-      setSelectedModel(health.active_model);
-    }
-  }, [health]);
-
-  const loadHistory = async () => {
+  const loadHistory = useCallback(async () => {
     try {
       const history = await fetchChatHistory();
       if (history.length > 0) {
@@ -52,7 +43,14 @@ export const AssistantView: React.FC<AssistantViewProps> = ({
     } catch (e) {
       console.warn('Could not load chat history', e);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    loadHistory();
+    if (health?.active_model && !selectedModel) {
+      setSelectedModel(health.active_model);
+    }
+  }, [health, loadHistory, selectedModel]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

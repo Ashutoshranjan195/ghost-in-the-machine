@@ -8,8 +8,7 @@ import {
   RefreshCw,
   HardDrive,
   FileCode,
-  CheckCircle2,
-  AlertCircle
+  CheckCircle2
 } from 'lucide-react';
 import { HealthStatus } from '../types';
 import { updateSettings, seedSampleMemories } from '../services/api';
