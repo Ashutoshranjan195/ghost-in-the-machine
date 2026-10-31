@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and uploads (keep schema and sample)
+data/echoes.db
+data/uploads/*
+!data/uploads/.gitkeep
+data/*.db-journal
+
+# Models weight caches
+models/*
+!models/.gitkeep
+
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.tmp/
+frontend/.oxlintrc.json
+*.local
+
+# Environment variables
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

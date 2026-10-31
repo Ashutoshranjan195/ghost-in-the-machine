@@ -1,0 +1,56 @@
+{
+  "echoes_vault_backup": [
+    {
+      "id": "mem-001",
+      "title": "Grandpa Joe's Old Blue Chevy",
+      "person_name": "Grandpa Joe",
+      "date": "July 1978",
+      "tags": "grandpa, childhood, summer, chevy, truck",
+      "description": "Every Saturday morning in July, Grandpa would pull out the hose and wash his 1968 Chevrolet pickup. He'd let me turn the crank on the chrome windows and sit on the tailgate eating salted watermelon. He told stories about driving through the Appalachians with grandma right after they were married, before the interstate highways were ever paved.",
+      "transcription": "I can still hear the splash of the garden hose against the chrome fenders and grandpa humming some old tune under his breath.",
+      "is_favorite": true
+    },
+    {
+      "id": "mem-002",
+      "title": "Nani's Cardamom Chai & Monsoon Mornings",
+      "person_name": "Nani Savitri",
+      "date": "August 1986",
+      "tags": "nani, chai, monsoon, kitchen, lessons",
+      "description": "Whenever the first raindrops of the monsoon hit the courtyard tiles, Nani would crush fresh cardamom pods and fresh ginger in the stone mortar. She insisted that tea must simmer for exactly twelve minutes to marry the spices. She taught me that quiet pauses in a rainy afternoon are the greatest luxury a person can have.",
+      "transcription": "Always listen to the rain before you speak, she would tell me. The world rushes too much.",
+      "is_favorite": true
+    },
+    {
+      "id": "mem-003",
+      "title": "The 1989 Jazz Festival Rainout",
+      "person_name": "Uncle Leo",
+      "date": "October 1989",
+      "tags": "music, jazz, uncle leo, autumn, rain",
+      "description": "It poured buckets at the waterfront pavilion just as the brass quartet began. Instead of running, Uncle Leo took his trench coat and held it over the saxophone player while the crowd clapped along to 'Take Five'. We ended up eating soggy cider donuts in a crowded subway station, laughing until our ribs ached.",
+      "transcription": null,
+      "is_favorite": false
+    },
+    {
+      "id": "mem-004",
+      "title": "Aunt Clara's Secret Apple Pie Recipe",
+      "person_name": "Aunt Clara",
+      "date": "Thanksgiving 1994",
+      "tags": "recipes, aunt clara, baking, thanksgiving, tradition",
+      "description": "Aunt Clara guarded her pie crust recipe like a state secret until her 80th birthday. The secret wasn't lard or butter alone—it was two tablespoons of ice-cold apple cider vinegar and grating the butter while frozen. 'Never handle the dough more than you'd hold a frightened bird,' she always said.",
+      "transcription": "Flour on the apron, cinnamon on the counter, and everyone in the kitchen stealing slices of warm apples.",
+      "is_favorite": false
+    },
+    {
+      "id": "mem-005",
+      "title": "The Wooden Workshop on Elm Street",
+      "person_name": "Dad (Arthur)",
+      "date": "Spring 1991",
+      "tags": "father, woodworking, craftsmanship, childhood",
+      "description": "Dad spent hours in the basement workshop smelling of cedar sawdust and lemon wood polish. He built the pine bookshelf in my childhood bedroom with hand-carved dove joints. He engraved a tiny swallow bird on the underside of the lowest shelf where only a kid lying on the floor could ever see it.",
+      "transcription": null,
+      "is_favorite": true
+    }
+  ],
+  "total_records": 5,
+  "app_origin": "Echoes - The Offline Memory Keeper"
+}
